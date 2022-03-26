@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="./view.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navItems">
+        <li>
+          <a href="add.html">Add </a>
+        </li>
+        <li>
+          <a href="view.html">View  </a>
+        </li>
+        <li>
+          <a href="update.html">Update </a>
+        </li>
+        <li>
+          <a href="search.html">Search  </a>
+        </li>
+      
+      </div>
+    </nav>
+    
+   <div class="container">  
+        <form id="contact"  method="post">
+          <h3>ADD FOrm</h3>
+          <h4>Please upload your details </h4>
+          <fieldset>
+            <input  placeholder="Your name" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input class = "w-100" placeholder="Your Phone Number (optional)" type="number" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Father Name " type="text" tabindex="4" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Mother Name " type="text" tabindex="4" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="dd/mm/yy " class = "w-100" type="number" tabindex="4" required>
+          </fieldset>
+          <fieldset>
+            <button type="submit"  type="submit" id="contact-submit" >Submit</button>
+          </fieldset>
+        </form>
+      </div>
+        </header>
+    <script src="../js/app.js"></script>
+    <script>
+      const input = document.querySelectorAll("input");
+      const contact = document.querySelector("#contact-submit")
+
+      contact.addEventListener("submit",()=>{
+      for (let i = 0; i < input.length; i++) {
+if (!input[i].value){
+  alert("all fields are required ")
+  break;
+}
+      }
+   window.location.href = "http://127.0.0.1:5501/bikram/view.html"
+
+
+
+      })
+
+
+    </script>
+
+
+
+
+    
+
+  </body>
+</html>
